@@ -42,6 +42,7 @@
      function doubleAtkPwr() {
          return cloud.attackPower += cloud.attackPower;
      }
+
      $("#start").click(function(event) {
          // display the arrows
          $(".arrow").css("display", "inherit");

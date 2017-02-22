@@ -1,12 +1,12 @@
-@font-face {
-    font-family: 'SS4';
-    font-weight: normal;
-    font-style: normal;
-    src: url('../fonts/SSF4_ABUKET.ttf') format('truetype');
-}
-
+@import url('https://fonts.googleapis.com/css?family=Anton');
 body {
     background: black;
+}
+
+span {
+    color: powderblue;
+    font-family: 'Anton', sans-serif;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 1);
 }
 
 #coverbackground {
@@ -16,35 +16,242 @@ body {
     background: url(../images/william-kowach-kimwu.jpg) center;
 }
 
+#coverbackground>* {
+    position: absolute;
+}
+
 img.img-responsive {
     position: relative;
     left: 28%;
 }
 
+button {
+    border: none;
+    border-radius: 15px !important;
+    box-shadow: 0 10px #27496d;
+}
+
+button#attack {
+    top: 95%;
+    left: 19%;
+    background-color: #6496c8;
+}
+
+button#attack:hover {
+    background-color: #417cb8
+}
+
+button#attack:active {
+    background-color: #417cb8;
+    box-shadow: 0 5px #27496d;
+    transform: translateY(5px);
+}
+
+button#start {
+    background-color: #F05C25;
+    top: 10%;
+    right: 10%;
+    width: 200px;
+    height: 90px;
+    box-shadow: 0 10px saddlebrown;
+}
+
+button#start:hover {
+    background-color: #BD481D;
+}
+
+button#start:active {
+    background-color: #702B11;
+    box-shadow: 0 5px #704433;
+    transform: translateY(5px);
+}
+
+div#log {
+    color: white;
+    height: 23%;
+    width: 57%;
+    background-color: black;
+    left: 3%;
+    top: 5%;
+    opacity: .5;
+    overflow: scroll;
+}
+
+div#log .danger {
+    color: indianred;
+}
+
+span#cloudHp {
+    top: 49%;
+    left: 23%;
+}
+
+span#slimeHp {
+    bottom: 2%;
+    right: 24%;
+}
+
+span#griffinHp {
+    bottom: 20%;
+    right: 10%;
+}
+
+span#reaperHp {
+    bottom: 8%;
+    right: 41%;
+}
+
+span#selectionText {
+    top: 10%;
+    right: 10%;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-size: xx-large;
+    transition: transform .4s cubic-bezier(.14, .87, .76, .33);
+    animation: reaper 2s infinite;
+    display: none;
+}
+
+img.arrow {
+    width: 200px;
+    height: 200px;
+    transition: transform .4s cubic-bezier(.14, .87, .76, .33);
+    display: none;
+}
+
+img#d_arrow1 {
+    top: 28%;
+    left: 53%;
+    animation: reaper 1s infinite;
+}
+
+img#d_arrow2 {
+    top: 50%;
+    right: 14%;
+    animation: bobble 1s infinite;
+}
+
+img#d_arrow3 {
+    top: 22%;
+    right: 5%;
+    animation: griffin 1s infinite;
+}
+
 img#cloud {
     width: 260px;
     height: 300px;
-    position: absolute;
     top: 52%;
     left: 7%;
 }
 
 img#slime {
-    position: absolute;
     left: 69%;
     top: 73%;
+    animation: bobble 1s infinite;
 }
 
 img#griffin {
-    position: absolute;
     left: 80%;
     top: 44%;
+    animation: griffin 2s infinite;
 }
 
 img#reaper {
-    position: absolute;
     top: 50%;
     left: 43%;
     width: 305px;
     height: 296px;
+    animation: reaper 2s infinite;
+}
+
+@keyframes reaper {
+    0% {
+        transform: translate3d(0px, -10px, 0px);
+        animation-timing-function: ease-in;
+    }
+    50% {
+        transform: translate3d(0px, -20px, 0px);
+        animation-timing-function: ease-out;
+    }
+    100% {
+        transform: translate3d(0px, -10px, 0px);
+    }
+}
+
+@keyframes griffin {
+    0% {
+        transform: translate3d(0px, 0px, 0px);
+        animation-timing-function: ease-in;
+    }
+    50% {
+        transform: translate3d(0px, -40px, 0px);
+        animation-timing-function: ease-out;
+    }
+    100% {
+        transform: translate3d(0px, 0px, 0px);
+    }
+}
+
+@keyframes bobble {
+    0% {
+        transform: translate3d(0px, -10px, 0px);
+        animation-timing-function: ease-out;
+    }
+    50% {
+        transform: translate3d(0px, -20px, 30px);
+        animation-timing-function: ease-in;
+    }
+    100% {
+        transform: translate3d(0px, -10px, 0px);
+    }
+}
+
+@-webkit-keyframes fall {
+    from,
+    15% {
+        -webkit-transform: rotate(0) translateX(0);
+        transform: rotate(0) translateX(0);
+        opacity: 1;
+        -webkit-animation-timing-function: cubic-bezier(.07, 2.02, .67, .57);
+        animation-timing-function: cubic-bezier(.07, 2.02, .67, .57);
+    }
+    50%,
+    60% {
+        -webkit-transform: rotate(90deg) translateX(0);
+        transform: rotate(90deg) translateX(0);
+        opacity: 1;
+        -webkit-animation-timing-function: cubic-bezier(.13, .84, .82, 1);
+        animation-timing-function: cubic-bezier(.13, .84, .82, 1);
+    }
+    85%,
+    to {
+        -webkit-transform: rotate(90deg) translateX(200px);
+        transform: rotate(90deg) translateX(200px);
+        opacity: 0;
+    }
+}
+
+@keyframes fall {
+    from,
+    15% {
+        -webkit-transform: rotate(0) translateX(0);
+        transform: rotate(0) translateX(0);
+        opacity: 1;
+        -webkit-animation-timing-function: cubic-bezier(.07, 2.02, .67, .57);
+        animation-timing-function: cubic-bezier(.07, 2.02, .67, .57);
+    }
+    50%,
+    60% {
+        -webkit-transform: rotate(90deg) translateX(0);
+        transform: rotate(90deg) translateX(0);
+        opacity: 1;
+        -webkit-animation-timing-function: cubic-bezier(.13, .84, .82, 1);
+        animation-timing-function: cubic-bezier(.13, .84, .82, 1);
+    }
+    85%,
+    to {
+        -webkit-transform: rotate(90deg) translateX(200px);
+        transform: rotate(90deg) translateX(200px);
+        opacity: 0;
+    }
 }

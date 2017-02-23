@@ -47,6 +47,15 @@ button#attack:active {
     transform: translateY(5px);
 }
 
+.enemyAttr0 {
+    color: gold;
+}
+
+.enemyAttr1 {
+    color: coral;
+    font-size: 58px;
+}
+
 button#start {
     background-color: #F05C25;
     top: 10%;
@@ -54,6 +63,7 @@ button#start {
     width: 200px;
     height: 90px;
     box-shadow: 0 10px saddlebrown;
+    border-color: saddlebrown;
 }
 
 button#start:hover {
@@ -70,10 +80,7 @@ div#log {
     color: white;
     height: 23%;
     width: 57%;
-    background-color: black;
-    left: 3%;
-    top: 5%;
-    opacity: .5;
+    background: rgba(0, 0, 0, 0.5);
     overflow: scroll;
 }
 
@@ -81,9 +88,48 @@ div#log .danger {
     color: indianred;
 }
 
+div#log p {
+    color: darkorange;
+    padding: 10px;
+}
+
+.alive {
+    display: inherit;
+}
+
+.dead {
+    display: none;
+}
+
 span#cloudHp {
-    top: 49%;
-    left: 23%;
+    top: 46%;
+    left: 18%;
+    font-size: 26px;
+}
+
+span#cloudAtkPwr {
+    color: darkred;
+    top: 70%;
+    left: 13%;
+    font-size: 58px;
+}
+
+span#griffinAtkPwr {
+    top: 54%;
+    right: 21%;
+    font-size: 58px;
+}
+
+span#reaperAtkPwr {
+    bottom: 48%;
+    right: 42%;
+    font-size: 58px;
+}
+
+span#slimeAtkPwr {
+    bottom: 10%;
+    right: 32%;
+    font-size: 58px;
 }
 
 span#slimeHp {
@@ -127,7 +173,7 @@ img#d_arrow1 {
 
 img#d_arrow2 {
     top: 50%;
-    right: 14%;
+    right: 18%;
     animation: bobble 1s infinite;
 }
 

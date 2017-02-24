@@ -97,8 +97,12 @@ div#log p {
     display: inherit;
 }
 
-.dead {
+.alive.dead {
     display: none;
+}
+
+.selectedEnemy {
+    display: inherit;
 }
 
 span#cloudHp {
@@ -158,26 +162,31 @@ span#selectionText {
     display: none;
 }
 
-img.arrow {
+img#d_arrow1 {
     width: 200px;
     height: 200px;
     transition: transform .4s cubic-bezier(.14, .87, .76, .33);
     display: none;
-}
-
-img#d_arrow1 {
     top: 28%;
     left: 53%;
     animation: reaper 1s infinite;
 }
 
 img#d_arrow2 {
+    width: 200px;
+    height: 200px;
+    transition: transform .4s cubic-bezier(.14, .87, .76, .33);
+    display: none;
     top: 50%;
     right: 18%;
     animation: bobble 1s infinite;
 }
 
 img#d_arrow3 {
+    width: 200px;
+    height: 200px;
+    transition: transform .4s cubic-bezier(.14, .87, .76, .33);
+    display: none;
     top: 22%;
     right: 5%;
     animation: griffin 1s infinite;

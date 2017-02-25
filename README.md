@@ -1,11 +1,17 @@
 <snippet>
   <content><![CDATA[
-# ${Fighting Game}
-TODO: Creating a basic fighting web application using JQuery
+# Fighting Game
+Creating a basic fighting web application using JQuery
 ## Installation
-TODO: Download source files via https://github.com/SwiftMike/fightingGame
+Download source files via https://github.com/SwiftMike/fightingGame
 ## Usage
-TODO: Write usage instructions
+Follow prompts in top left corner to play the Game
+## Requirements
+1. Initialize HTML Elements
+2. 
+## Technologies Used
+- Jquery for DOM manipulation
+- JSON for storing objects
 ## Contributing
 1. Fork it!
 2. Create your feature branch: `git checkout -b my-new-feature`
@@ -13,11 +19,11 @@ TODO: Write usage instructions
 4. Push to the branch: `git push origin my-new-feature`
 5. Submit a pull request :D
 ## History
-TODO: Write history
+ - Just static as of now. Plan on adding keyboard functionality and using GameQuery to enhance the game.
 ## Credits
-TODO: Write credits
+Michael Olie
 ## License
-TODO: Write license
+
 ]]></content>
   <tabTrigger>readme</tabTrigger>
 </snippet>

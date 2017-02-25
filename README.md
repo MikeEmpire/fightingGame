@@ -6,9 +6,6 @@ Creating a basic fighting web application using JQuery
 Download source files via https://github.com/SwiftMike/fightingGame
 ## Usage
 Follow prompts in top left corner to play the Game
-## Requirements
-1. Initialize HTML Elements
-2. 
 ## Technologies Used
 - Jquery for DOM manipulation
 - JSON for storing objects

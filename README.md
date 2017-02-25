@@ -19,8 +19,5 @@ Follow prompts in top left corner to play the Game
  - Just static as of now. Plan on adding keyboard functionality and using GameQuery to enhance the game.
 ## Credits
 Michael Olie
-## License
-
-]]></content>
   <tabTrigger>readme</tabTrigger>
 </snippet>

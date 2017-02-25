@@ -30,12 +30,12 @@
      griffin = {
          "name": "Griffin",
          "attackPower": 10,
-         "hp": 175
+         "hp": 475
      };
      slime = {
          "name": "Slime",
          "attackPower": 6,
-         "hp": 100
+         "hp": 300
      };
      cloudHp = cloud.hp;
      cloudAtkPwr = cloud.attackPower;
@@ -81,7 +81,7 @@
      function atkGriffin() {
          griffinHp -= cloudAtkPwr;
          doubleAtkPwr();
-         batlog = "You have attacked " + griffin.name + griffin.name + ". 's hp is " + griffinHp + ". Your Attack Power has doubled. It is " + cloudAtkPwr;
+         batlog = "You have attacked " + griffin.name + ". " + griffin.name + "'s hp is " + griffinHp + ". Your Attack Power has doubled. It is " + cloudAtkPwr;
          p.append(batlog + "<br>");
          $('#griffinHp').text(griffinHp);
          griffinHp = parseInt(griffinHp);
@@ -215,7 +215,7 @@
                  // prompt user to attack
                  selectionText.html("Press the attack button!");
                  // register the attack button to attack selectedEnemy
-                 $("attack").click(function() {
+                 $("#attack").click(function() {
                      atkGriffin();
                      griffinAtk();
                      if (griffinHp <= 0) {
